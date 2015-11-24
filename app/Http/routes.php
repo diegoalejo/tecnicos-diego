@@ -11,6 +11,21 @@
 |
 */
 
+
+Route::get("admin", function () {
+
+	return view("example");
+});
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get("peppa-pig", function () {
+	return view("pig");
+});
+
+Route::get("{slug_url}" , function ($slugUrl) {
+	return "post: " . $slugUrl;
+
 });
